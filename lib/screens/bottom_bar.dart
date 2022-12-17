@@ -1,3 +1,4 @@
+import 'package:booktickets/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -10,21 +11,28 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  int selectedIndex = 0;
-  static final List<Widget> _widgetOptions = <Widget>[
 
-    const Text("home"),
+  int selectedIndex = 0;
+
+
+  static final List<Widget> _widgetOptions = <Widget>[
+     HomeScreen(),
     const Text("search"),
     const Text("tickets"),
     const Text("profile")
   ];
 
+
+
+
   void _onItemTapped(int index) {
     setState((){
       selectedIndex = index;
     });
-
   }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
